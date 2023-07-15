@@ -1,0 +1,79 @@
+/* whole page */
+*{
+    background: none;
+    font-family: 'helvetica neue';
+}
+body {
+  font-family: 'helvetica neue';
+  }
+  #hero {
+    background: url('../assets/245420660_139615711723645_6037111677170628917_n.jpg') no-repeat;
+    background-size: cover;
+    padding: 50px 0;
+    margin-bottom: 50px;
+    height:630px;
+    width: 100%;
+  }
+  #hero img {
+    display: block;
+    height: 492px;
+  }
+  
+  #hero h2 {
+    font-size: 50px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  #hero div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ #aboutgeims{
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+ }
+  #kamalghansala{
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  #learnmorebtn {
+    background: white;
+    border: 5px solid #3F8DA7;
+    color: #3F8DA7;
+    padding: 5px 10px;
+    text-decoration: none;
+  }
+  
+  #learnmorebtn:hover {
+    padding: 5px 10px;
+    background: #3F8DA7;
+    color: white;
+  }
+  
+  
+  /* columns */
+  .moreaboutus{
+    margin-top: 8rem;
+  }
+  .three-col {
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    margin: 0 10px;
+  }
+  
+  .three-col img {
+    border-radius: 50%;
+    border: 3px solid #3F8DA7;
+    height: 200px;
+    width: 200px;
+    margin: 25px 0;
+  }
+  
+  .three-col p {
+    margin-bottom: 40px;
+  }

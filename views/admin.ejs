@@ -1,0 +1,31 @@
+
+<link rel="stylesheet" href="css/admin.css">
+  <body>
+    <h1 style="text-align:center; margin-top: 3rem;">Your are currently acccessing Admin page</h1>
+  <table class="content-table">
+    <thead>
+      <tr>
+        <th>#id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Blood group</th>
+        <th>Date</th>
+        <th >timing</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% rows.forEach(function(row) { %>
+      <tr>
+        <th scope="row"><%= row.id %></th>
+        <td><%= row.name %></td>
+        <td><%= row.email %></td>
+        <td><%= row.phone %></td>
+        <td><%= row.bloodtype %></td>
+        <td><%= row.date %></td>
+        <td class="text-end"><%= row.time %></td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+  </body>

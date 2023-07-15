@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/indexstyle.css">
+    <script src="js/indexscript.js"></script>
+    <title>Blood donation portal Geims</title>
+</head>
+
+
+<header >
+    <a href="https://geimshospital.com" class="logocontainer"><img src="assets/white-logo.png" alt="geims"
+            class="logo"></a>
+    <nav>
+        <ul class="nav-elements">
+            <li class="navli "><a class="nava" href="/">home</a></li>
+            <li class="navli"><a class="nava" href="/about">about us</a></li>
+            <li class="navli"><a class="nava" href="/contact"> contact us </a> </li>
+        </ul>
+    </nav>
+    <a class="appbtn" onclick="openForm()" href="#"><button>book an appointment 💉</button></a>
+</header>
+<div class="content">
+    <% if(typeof alert != 'undefined') { %>
+        <% alert.forEach(function(error) { %>
+            <div class="alert alert-warning" role="alert">
+                <%= error.msg %>
+                    <span class="close-btn">&times;</span>
+              </div>
+        <% }) %>
+    <% } %>
+    <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="abovepopup" id="myform">
+           
+            <form action="/" method="POST" onsubmit="return validateForm()"class="form-container">
+                <h1>Book an appointment</h1>
+                <label for="name">Name</label>
+                <input type="text" class="inputfield" placeholder="Enter name" name="name" required> 
+                <label for="email">email</label>
+                <input type="text"class="inputfield" placeholder="Enter email" name="email" required> 
+                <label for="Bloodtype">Choose your bloodtype:</label>
+                <select id="Bloodtype" class="inputfield"name="Bloodtype" required>
+                    <option value="">---select your blood group---</option>
+                    <option value="A+">A+</option>
+                    <option value="B+">B+</option>
+                    <option value="AB+">AB+</option>
+                    <option value="O+">O+</option>
+                    <option value="A-">A-</option>
+                    <option value="B-">B-</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O-">O-</option>
+                </select>
+                <label for="phone">Phone no:</label>
+                <input type="text" class="inputfield" name="phone" placeholder="Enter phone no." required>
+                <label for="day">Select a day:</label>
+                <input type="date" id="date" name="day" required>
+                <label for="appt">Select timing:</label>
+                <input type="time" id="appt" name="appt" required>
+                <button type="button" class="cancelbtn" onclick="closeForm()">Close</button>
+                <button type="submit" class="submitbtn">submit</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <%- body %>
+
+
+
+    <footer>
+
+        <div class="container__footer">
+            <div class="box__footer">
+                <div class="footerlogo">
+                    <img src="assets/white-logo.png" alt="geism">
+                </div>
+                <div class="terms">
+                    <p>Graphic Era Institute of Medical Sciences is the newest inclusion in the list of premier institutions under the umbrella of Graphic Era Group of Institutions.
+    
+                        This ultra modern facility being completed at a rapid pace, will finish with a 1250 Bed Capacity equipped with all state of the art equipment meeting all global standards, giving the people of the state and the rest of the country a world-class medical facility at an affordable price.
+                        
+                        </p>
+                </div>
+            </div>
+            <div class="box__footer">
+                <h2>Quick Links</h2>
+                <a href="https://www.facebook.com/GraphicEraInstituteofMedicalSciences/">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+                    facebook</a>
+                <a href="https://www.instagram.com/geimshospital/">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                    Instagram</a>
+                <a href="https://in.linkedin.com/company/geimshospital">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                    LinkedIn</a>
+                
+            </div>
+    
+            <div class="box__footer">
+                <h2>Contacts</h2>
+                <a href="https://www.google.com/maps/dir/30.1837897,78.1450406/google+maps+geims+hospital/@30.2665877,77.876895,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x390f2b54c5be12a1:0xbd6f665f40dc94e8!2m2!1d77.8910623!2d30.3502384?entry=ttu">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><path d="M302.8 312C334.9 271.9 408 174.6 408 120C408 53.7 354.3 0 288 0S168 53.7 168 120c0 54.6 73.1 151.9 105.2 192c7.7 9.6 22 9.6 29.6 0zM416 503l144.9-58c9.1-3.6 15.1-12.5 15.1-22.3V152c0-17-17.1-28.6-32.9-22.3l-116 46.4c-.5 1.2-1 2.5-1.5 3.7c-2.9 6.8-6.1 13.7-9.6 20.6V503zM15.1 187.3C6 191 0 199.8 0 209.6V480.4c0 17 17.1 28.6 32.9 22.3L160 451.8V200.4c-3.5-6.9-6.7-13.8-9.6-20.6c-5.6-13.2-10.4-27.4-12.8-41.5l-122.6 49zM384 255c-20.5 31.3-42.3 59.6-56.2 77c-20.5 25.6-59.1 25.6-79.6 0c-13.9-17.4-35.7-45.7-56.2-77V449.4l192 54.9V255z"/></svg>
+                    Graphic Era Institute of Medical Sciences <br>
+                    16th Milestone, Chakrata Rd, Dehradun,<br> Uttarakhand 248008</a>
+                <a href="tel:+180088997351">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                1800 889 7351</a>
+                <a href="mailto:info.geims@geu.ac.in">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+                    Have a question? <br>
+                    info.geims@geu.ac.in</a>             
+            </div>
+            <button onclick="scrollToTop()"
+                class="backtotop">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">--><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg></Button>
+        </div>
+    
+        <div class="box__copyright">
+            <hr>
+            <p>Copyright © 2022 <a href="https://geimshospital.com" >Graphic Era Hospital</a> All Rights Reserved.</p>
+        </div>
+    </footer>
+</div>
+</body>
+
+</html>
