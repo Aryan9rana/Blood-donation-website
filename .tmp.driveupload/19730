@@ -1,0 +1,39 @@
+node modules added
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Changes to be committed:
+#	modified:   .DS_Store
+#	modified:   .env
+#	new file:   node_modules/.DS_Store
+#	new file:   node_modules/async/.DS_Store
+#	new file:   node_modules/call-bind/.DS_Store
+#	new file:   node_modules/chalk/.DS_Store
+#	new file:   node_modules/chokidar/.DS_Store
+#	new file:   node_modules/concat-map/.DS_Store
+#	new file:   node_modules/ejs/.DS_Store
+#	new file:   node_modules/express-ejs-layouts/.DS_Store
+#	new file:   node_modules/express-validator/.DS_Store
+#	new file:   node_modules/express/.DS_Store
+#	new file:   node_modules/get-intrinsic/.DS_Store
+#	new file:   node_modules/has-proto/.DS_Store
+#	new file:   node_modules/has-symbols/.DS_Store
+#	new file:   node_modules/has/.DS_Store
+#	new file:   node_modules/iconv-lite/.DS_Store
+#	new file:   node_modules/jake/.DS_Store
+#	new file:   node_modules/mysql/.DS_Store
+#	new file:   node_modules/nodemon/.DS_Store
+#	new file:   node_modules/nopt/.DS_Store
+#	new file:   node_modules/object-inspect/.DS_Store
+#	new file:   node_modules/pstree.remy/.DS_Store
+#	new file:   node_modules/qs/.DS_Store
+#	new file:   node_modules/readable-stream/.DS_Store
+#	new file:   node_modules/semver/.DS_Store
+#	new file:   node_modules/side-channel/.DS_Store
+#	new file:   node_modules/simple-update-notifier/.DS_Store
+#	new file:   node_modules/string_decoder/.DS_Store
+#	new file:   node_modules/undefsafe/.DS_Store
+#	new file:   node_modules/validator/.DS_Store
+#	modified:   public/.DS_Store
+#
