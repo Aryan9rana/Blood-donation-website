@@ -9,7 +9,7 @@ require('dotenv').config();
 
 
 const app= express();
-const port=3000;
+const port=process.env.PORT || 3000;
 
 
 
@@ -31,10 +31,10 @@ const urlencodedParser = bodyParser.urlencoded({extended: false});
 
 const pool = mysql.createPool({
 connectionLimit : 100,
-host            : process.env.DB_HOST,
-user            : process.env.DB_USER,
-password        : process.env.DB_PASS,
-database        : process.env.DB_NAME
+host            : process.env.DB_HOST || "localhost",
+user            : process.env.DB_USER || "root",
+password        : process.env.DB_PASS || "root",
+database        : process.env.DB_NAME || "blood_donation"
 });
 
 
