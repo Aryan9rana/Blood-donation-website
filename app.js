@@ -104,7 +104,7 @@ app.get('/',(req,res)=>{
         pool.getConnection((err,connection)=>{
             if(err) throw err;
             console.log('connected as ID '+ connection.threadId);
-            connection.query('SELECT * FROM USER',(err,rows)=>{
+            connection.query('SELECT * FROM user',(err,rows)=>{
                 connection.release();
     
                 if(!err){
